@@ -10,6 +10,4 @@ def preconfigUpload(orchIP, loginCookie, name, tag, data):
     response = requests.request("POST", url, headers=headers, data=payload, cookies=loginCookie, verify=False)
     print(response.text.encode('utf8'))
 #     
-# Pass required variables to spcustomCreate function
-    create = spcustomCreate(name, tag)
 #

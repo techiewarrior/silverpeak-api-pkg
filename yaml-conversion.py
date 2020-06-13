@@ -1,18 +1,17 @@
+# Read all yaml files in specified directory
+#
 def readYAML(orchIP, loginCookie, path):
     for entry in os.listdir(path):
         if entry.endswith('.yml'):
           with open(entry, 'r') as file:
               dict = yaml.load(file, Loader=yaml.FullLoader)
-          name = (dict['applianceInfo']['hostname'])
-          tag = (dict['applianceInfo']['hostname'])
-          file.close()
 #
 # place hostname into "name" and "tag, to be used in API post later
           name = (dict['applianceInfo']['hostname'])
           tag = (dict['applianceInfo']['hostname'])
           file.close()
 #
-# open and read yaml file as text into a string
+# open and read yaml file as text into a string, so it can be converted to base64 encoding
           f = open(entry, "r")
           text = f.read()
 #
