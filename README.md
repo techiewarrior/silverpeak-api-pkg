@@ -7,7 +7,10 @@ git alias = 'sp-api-pkg'
 
 Notes:
      - look at using classes to return multiple results of functions,
-     - in order to return multiple functions to main.py
+     - in order to return multiple functions to main.py.
+
+     - This will cause all functions to be called from main.py.
+
 
 
 
