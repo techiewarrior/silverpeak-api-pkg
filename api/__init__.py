@@ -1,5 +1,10 @@
 # init file for 'api' package
-# imports functions from various modules
-#
 
+# import functions from modules in the api package
 
+from .login import OrchLogin
+from .yamlConversion import readYAML
+from .preconfigOrch import preconfigUpload
+from .spcustomFile import spcustomCreate
+
+#end
