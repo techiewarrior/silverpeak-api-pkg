@@ -1,7 +1,7 @@
 # Create cloudinit files to make iso files for ECV boot
 
 def spcustomCreate(name, tag):
-
+    
     file = open("spcustom.yml", "w")
 #
     file.write("silverpeak_vxoa_init:\n")

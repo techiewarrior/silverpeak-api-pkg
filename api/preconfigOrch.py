@@ -1,6 +1,7 @@
 # Upload preconfiguration to Orchestrator via REST API
 
 def preconfigUpload(orchIP, loginCookie, name, tag, data):
+    import requests
 
 # Surpress ssl certificate verifcation warnings
 
@@ -13,5 +14,5 @@ def preconfigUpload(orchIP, loginCookie, name, tag, data):
     headers = {'Content-Type': 'application/json'}
     response = requests.request("POST", url, headers=headers, data=payload, cookies=loginCookie, verify=False)
     print(response.text.encode('utf8'))
-#     
+
 # end

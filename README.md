@@ -9,7 +9,6 @@ Notes:
 
 
 Issues:
-     - add imports to each function, i.e. requests, os, yaml, base64, etc.,
-     - rather than having to call from 'main'.
+
 
 
