@@ -9,5 +9,6 @@ Notes:
      - All functions will be called from a 'main' script
 
 Issues:
-     - look at using classes to return multiple results of readYAML function,
+     - look at using classes to return multiple results of readYAML function.
+     - add imports to each function, i.e. requests, os, yaml, base64, etc.
 
