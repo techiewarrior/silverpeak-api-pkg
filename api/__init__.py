@@ -2,8 +2,8 @@
 
 # import functions from modules in the api package
 
-from api.login import OrchLogin
-from api.yamlConversion import readYAML
-from api.preconfigOrch import preconfigUpload
-from api.spcustomFile import spcustomCreate
+from .login import OrchLogin
+from .yamlConversion import readYAML
+from .preconfigOrch import preconfigUpload
+from .spcustomFile import spcustomCreate
 
