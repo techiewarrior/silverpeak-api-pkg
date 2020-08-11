@@ -20,7 +20,8 @@ def readYAML(path):
 #
 # decode base64 from bytes to string, to get rid of the "b' 'characters"
           data = conversion.decode()
-
-          return(name, tag, data)
+#
+# Pass data to preconfiguration module for upload via API
+          upload = preconfigUpload(orchIP, loginCookie, name, tag, data)
 
 #end
