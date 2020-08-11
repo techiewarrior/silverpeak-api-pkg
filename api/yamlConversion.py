@@ -1,6 +1,6 @@
 # Read all yaml files in specified directory
 #
-def readYAML(orchIP, loginCookie, path):
+def readYAML(path):
     for entry in os.listdir(path):
         if entry.endswith('.yml'):
           with open(entry, 'r') as file:
@@ -20,7 +20,7 @@ def readYAML(orchIP, loginCookie, path):
 #
 # decode base64 from bytes to string, to get rid of the "b' 'characters"
           data = conversion.decode()
-#
-# Pass data to preconfiguration function for upload via API
-          upload = preconfigUpload(orchIP, loginCookie, name, tag, data)
-#
+
+          return(name, tag, data)
+
+#end
