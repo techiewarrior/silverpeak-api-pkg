@@ -42,8 +42,10 @@ def readYAML(path):
 
 ### For local testing ###
 if __name__ == '__main__':
-    print('This module was ran directly.')
 
+    print('This module was ran directly. It is for testing only.')
+    print('No preconfiguration will be upladed to Orchestrator.')
+    
     def readYAML(path):
         import os
         import base64
