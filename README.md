@@ -11,6 +11,7 @@ For example, to pass login variables to the function 'OrchLogin'
 in the 'login.py' module, use 'api.OrchLogin(orchIP, user, password)'.
 
 
+*** Branch v1.2, for testing modules.  See Issue #4 for reference. ***
 
 
 
