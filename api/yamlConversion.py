@@ -3,7 +3,7 @@
 # Take YAML configuration info and convert to base64 encoding.
 # Upload preconfiguration to Orchestrator.
 
-def readYAML(path):
+def readYAML(orchIP, loginCookie, path):
     import os
     import base64
     import yaml
@@ -41,12 +41,15 @@ def readYAML(path):
 
 
 ### For local testing ###
+
 if __name__ == '__main__':
 
-    print('This module was ran directly. It is for testing only.')
-    print('No preconfiguration will be upladed to Orchestrator.')
-    
-    def readYAML(path):
+    print('\n *********************************************************')
+    print('\n    This module was ran directly. It is for testing only.')
+    print('\n    No configurations will be uploaded to Orchestrator.')
+    print('\n ********************************************************** \n')
+
+    def readTEST(path):
         import os
         import base64
         import yaml
@@ -79,6 +82,6 @@ if __name__ == '__main__':
                 print('name: ' + name + ',' + ' tag: ' + tag + ' data: ' + data)
 
     path = r'C:\Users\janderson.JANDERSON-W10\Box Sync\Jason Anderson\Sync\GitHub\lab-ecv-autoDeployment\lab-ecv-autoDeployment'
-    readYAML(path)
+    readTEST(path)
 
 #end
