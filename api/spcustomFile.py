@@ -1,9 +1,29 @@
 # Create cloudinit files to make iso files for ECV boot
 
-def spcustomCreate(name, tag):
+def spcustomCreate(name, tag, path):
+
+    import os
+
+# Create directory for specific appliance and its cloudinit file
+
+    directory = "{0}".format(name)
+    try:
+      os.mkdir(directory)
+    except OSError:
+      print("Creation of directory %s has failed" % directory)
+    else:
+      print("Successfully created directory %s" % directory)
+
+# Create cloudinit file for specific appliance
+
+# First join together 'directory' and 'spcustom.ym', for a complete path, and store in 'filename'
+
+    filename = os.path.join(path, directory, "spcustom.yml")
+
+# Now open 'filename' and write cloudinit configuration for each appliance
     
-    file = open("spcustom.yml", "w")
-#
+    file = open("filename", "w")
+
     file.write("silverpeak_vxoa_init:\n")
     file.write("  config_vars:\n")
     file.write("      HOSTNAME: {0}\n".format(name))

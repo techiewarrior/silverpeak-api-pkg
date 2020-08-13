@@ -11,7 +11,13 @@ For example, to pass login variables to the function 'OrchLogin'
 in the 'login.py' module, use 'api.OrchLogin(orchIP, user, password)'.
 
 
-*** Branch v1.2, for testing modules.  See Issue #4 for reference. ***
+*** Branch v1.2.1. ***
+
+- figuring out yamlConversion.py module.
+- need module to be universal
+    - needs to read .yml file and then return values for 'name', 'tag', and 'data'
+    - loop needs to be in 'main', and not the 'yamlConversion' module
+
 
 
 

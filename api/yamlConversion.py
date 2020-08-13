@@ -81,6 +81,8 @@ if __name__ == '__main__':
 
                 print('name: ' + name + ',' + ' tag: ' + tag + ' data: ' + data)
 
+                return name, tag, data
+
     path = r'C:\Users\janderson.JANDERSON-W10\Box Sync\Jason Anderson\Sync\GitHub\lab-ecv-autoDeployment\lab-ecv-autoDeployment'
     readTEST(path)
 
