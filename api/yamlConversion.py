@@ -1,6 +1,6 @@
 # Read specified yaml file.
 # Find the appliance name in the file, and place into the "name" and "tag" variables.
-# Take YAML configuration info and convert to base64 encoding.
+# Take YAML configuration and convert to base64 format.
 # Return "name", "tag", and "data" from function.
 
 def readYAML(filename):
