@@ -36,10 +36,13 @@ def readYAML(filename):
 
 if __name__ == '__main__':
 
-    print('\n *********************************************************')
+    print('\n ****************************************************************')
     print('\n    This module was ran directly. It is for testing only.')
-    print('\n    No configurations will be uploaded to Orchestrator.')
-    print('\n ********************************************************** \n')
+    print('    It will read all .yml files within the specified directory')
+    print('    No configurations will be uploaded to Orchestrator.')
+    print('    This section can serve as an example for looping over many')
+    print('    .yml files, in a \'main\' type function.')
+    print('\n **************************************************************** \n')
 
     def readTEST(path):
         import os
@@ -73,7 +76,6 @@ if __name__ == '__main__':
 
                 print('name: ' + name + ',' + ' tag: ' + tag + ' data: ' + data)
 
-                return name, tag, data
 
     path = r'C:\Users\janderson.JANDERSON-W10\Box Sync\Jason Anderson\Sync\GitHub\lab-ecv-autoDeployment\lab-ecv-autoDeployment'
     readTEST(path)
