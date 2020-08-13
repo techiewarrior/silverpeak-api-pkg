@@ -13,12 +13,8 @@ in the 'login.py' module, use 'api.OrchLogin(orchIP, user, password)'.
 
 *** Branch v1.2.1. ***
 
-- figuring out yamlConversion.py module.
+- figuring out spcustomFile.py module.
 - need module to be universal
-    - needs to read .yml file and then return values for 'name', 'tag', and 'data'
-    - loop needs to be in 'main', and not the 'yamlConversion' module
-
-
-
-
-
+    - needs to take in 'name', 'tag', and 'path' values from 'main',
+    - instead of from a different module
+    
