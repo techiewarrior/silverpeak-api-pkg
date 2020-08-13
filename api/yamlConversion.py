@@ -32,7 +32,11 @@ def readYAML(filename):
 
         return name, tag, data
 
-### For local testing ###
+""" 
+**********************************************************************************
+For local testing Only
+**********************************************************************************
+"""
 
 if __name__ == '__main__':
 
@@ -43,6 +47,21 @@ if __name__ == '__main__':
     print('    This section can serve as an example for looping over many')
     print('    .yml files, in a \'main\' type function.')
     print('\n **************************************************************** \n')
+
+"""
+*********** Example for 'main'
+
+for entry in os.listdir(path):
+            if entry.endswith('.yml'):
+                filename = os.path.join(path, entry)
+                result = api.readYAML(filename)
+                print(result[0])
+                print(result[1])
+                print(result[2])
+                print()
+                
+*************                
+"""
 
     def readTEST(path):
         import os
