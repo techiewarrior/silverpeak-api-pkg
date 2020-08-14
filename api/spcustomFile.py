@@ -6,18 +6,17 @@ def spcustomCreate(name, tag, path):
 
 # Create directory for specific appliance and its cloudinit file
 
-    directory = name
-    filepath = os.path.join(path, directory)
+    directory = os.path.join(path, name)
     try:
-      os.mkdir(filepath)
+      os.mkdir(directory)
     except OSError:
-      print("Creation of directory %s has failed" % filepath)
+      print("Creation of directory %s has failed" % directory)
     else:
-      print("Successfully created directory %s" % filepath)
+      print("Successfully created directory %s" % directory)
 
 # Create cloudinit file for specific appliance
 
-    with open(os.path.join(filepath, 'spcustom.yml'), 'w') as file:
+    with open(os.path.join(directory, 'spcustom.yml'), 'w') as file:
     
         file.write("silverpeak_vxoa_init:\n")
         file.write("  config_vars:\n")
@@ -38,7 +37,7 @@ def spcustomCreate(name, tag, path):
         file.write("     - \"cli:en;conf t;write memory;reboot nonconfirm\"\n")
         file.write("# end\n")
         file.close()
-        print("spcustom.yml created in " + filepath)
+        print("Succesfully created spcustom.yml created in %s" % directory)
 
 if __name__ == '__main__':
 
