@@ -6,43 +6,51 @@ def spcustomCreate(name, tag, path):
 
 # Create directory for specific appliance and its cloudinit file
 
-    directory = "{0}".format(name)
+    directory = name
+    filepath = os.path.join(path, directory)
     try:
-      os.mkdir(directory)
+      os.mkdir(filepath)
     except OSError:
-      print("Creation of directory %s has failed" % directory)
+      print("Creation of directory %s has failed" % filepath)
     else:
-      print("Successfully created directory %s" % directory)
+      print("Successfully created directory %s" % filepath)
 
 # Create cloudinit file for specific appliance
 
-# First join together 'directory' and 'spcustom.ym', for a complete path, and store in 'filename'
-
-    filename = os.path.join(path, directory, "spcustom.yml")
-
-# Now open 'filename' and write cloudinit configuration for each appliance
+    with open(os.path.join(filepath, 'spcustom.yml'), 'w') as filename:
     
-    file = open("filename", "w")
+        file = open("filename", "w")
 
-    file.write("silverpeak_vxoa_init:\n")
-    file.write("  config_vars:\n")
-    file.write("      HOSTNAME: {0}\n".format(name))
-    file.write("      ACCNAME: \"Silver Peak SE - Jason Anderson\"\n")
-    file.write("      ACCKEY: \"95tzEHscBr7ctR2QcmNL2er9js8pr43q\"\n")
-    file.write("      SYS_TAG: \"{0}\"\n".format(tag))
-    file.write("\n")
-    file.write("  pre_mgmtd_tasks:\n")
-    file.write("    - \"configdb:/system/hostname,hostname,_$HOSTNAME$\"\n")
-    file.write("    - \"configdb:/cn/tunneld/portal/config/registration/account,string,_$ACCNAME$\"\n")
-    file.write("    - \"configdb:/cn/tunneld/portal/config/registration/key,string,_$ACCKEY$\"\n")
-    file.write("    - \"configdb:/cn/tunneld/portal/config/registration/site,string,_$SYS_TAG$\"\n")
-    file.write("\n")
-    file.write("  post_mgmtd_tasks:\n")
-    file.write("     - \"cli:en;conf t;ip name-server 1.1.1.1\"\n")
-    file.write("     - \"cli:en;conf t;system auto-mac-configure enable\"\n")
-    file.write("     - \"cli:en;conf t;write memory;reboot nonconfirm\"\n")
-    file.write("# end\n")
-    file.close()
-    print("spcustom.yml created")
+        file.write("silverpeak_vxoa_init:\n")
+        file.write("  config_vars:\n")
+        file.write("      HOSTNAME: {0}\n".format(name))
+        file.write("      ACCNAME: \"Silver Peak SE - Jason Anderson\"\n")
+        file.write("      ACCKEY: \"95tzEHscBr7ctR2QcmNL2er9js8pr43q\"\n")
+        file.write("      SYS_TAG: \"{0}\"\n".format(tag))
+        file.write("\n")
+        file.write("  pre_mgmtd_tasks:\n")
+        file.write("    - \"configdb:/system/hostname,hostname,_$HOSTNAME$\"\n")
+        file.write("    - \"configdb:/cn/tunneld/portal/config/registration/account,string,_$ACCNAME$\"\n")
+        file.write("    - \"configdb:/cn/tunneld/portal/config/registration/key,string,_$ACCKEY$\"\n")
+        file.write("    - \"configdb:/cn/tunneld/portal/config/registration/site,string,_$SYS_TAG$\"\n")
+        file.write("\n")
+        file.write("  post_mgmtd_tasks:\n")
+        file.write("     - \"cli:en;conf t;ip name-server 1.1.1.1\"\n")
+        file.write("     - \"cli:en;conf t;system auto-mac-configure enable\"\n")
+        file.write("     - \"cli:en;conf t;write memory;reboot nonconfirm\"\n")
+        file.write("# end\n")
+        file.close()
+        print("spcustom.yml created")
+
+if __name__ == '__main__':
+
+    print('\n ****************************************************************')
+    print('\n    This module was ran directly. It is for testing only.')
+    print('\n **************************************************************** \n')
+
+    name = 'ecv_test'
+    tag = 'ecv_tag'
+    path = r'C:\Users\janderson.JANDERSON-W10\Box Sync\Jason Anderson\Sync\Dev\silverpeak-api-pkg\tests'
+    spcustomCreate(name, tag, path)
 
 #end
