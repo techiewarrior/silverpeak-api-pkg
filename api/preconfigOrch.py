@@ -1,7 +1,8 @@
 """
 **********************************************************
 
-Upload preconfiguration to Orchestrator via REST API
+This mocule uploads preconfiguration files to 
+Orchestrator.
 
 **********************************************************
 """
