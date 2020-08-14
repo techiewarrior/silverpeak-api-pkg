@@ -1,8 +1,8 @@
 """
 ************************************************************************
 
-This module logs in to Orchestrator and stores the returned
-session cookie, for future API calls.
+This module logs in to Orchestrator and returns the session 
+cookie, for future API calls.
 
 ************************************************************************
 """
