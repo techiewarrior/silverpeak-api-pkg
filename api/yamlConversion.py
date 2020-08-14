@@ -63,16 +63,16 @@ for entry in os.listdir(path):
 *************                
 """
 
-    def readTEST(path):
-        import os
-        import base64
-        import yaml
+def readTEST(path):
+    import os
+    import base64
+    import yaml
 
-        for entry in os.listdir(path):
-            if entry.endswith('.yml'):
-                filename = os.path.join(path, entry)
-                with open(filename, 'r') as file:
-                    dict = yaml.load(file, Loader=yaml.FullLoader)
+    for entry in os.listdir(path):
+        if entry.endswith('.yml'):
+            filename = os.path.join(path, entry)
+            with open(filename, 'r') as file:
+                dict = yaml.load(file, Loader=yaml.FullLoader)
 
                 # place hostname into "name" and "tag", to be used in API post later
 
