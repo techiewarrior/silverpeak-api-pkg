@@ -17,10 +17,8 @@ def spcustomCreate(name, tag, path):
 
 # Create cloudinit file for specific appliance
 
-    with open(os.path.join(filepath, 'spcustom.yml'), 'w') as filename:
+    with open(os.path.join(filepath, 'spcustom.yml'), 'w') as file:
     
-        file = open("filename", "w")
-
         file.write("silverpeak_vxoa_init:\n")
         file.write("  config_vars:\n")
         file.write("      HOSTNAME: {0}\n".format(name))
@@ -40,7 +38,7 @@ def spcustomCreate(name, tag, path):
         file.write("     - \"cli:en;conf t;write memory;reboot nonconfirm\"\n")
         file.write("# end\n")
         file.close()
-        print("spcustom.yml created")
+        print("spcustom.yml created in " + filepath)
 
 if __name__ == '__main__':
 
