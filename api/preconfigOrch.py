@@ -1,7 +1,7 @@
 """
 **********************************************************
 
-This mocule uploads preconfiguration files to 
+This module uploads preconfiguration files to 
 Orchestrator.
 
 **********************************************************

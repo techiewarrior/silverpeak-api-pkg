@@ -1,9 +1,10 @@
 """
-********
+***********************************************************
 
-This module retrieves information on all appliances.
+This module retrieves information on all appliances, and 
+returns the json response.
 
-********
+***********************************************************
 """
 
 def applianceINFO(orchIP, loginCookie):
