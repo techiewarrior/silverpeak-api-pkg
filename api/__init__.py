@@ -1,6 +1,12 @@
-# init file for 'api' package
+"""
+***************************************************************
 
-# import functions from modules in the api package
+This module initializes the 'api' package, when it is imported.
+It imports all of the functions from the modules in the api 
+package, so they can be called by using 'api.<function>'.
+
+***************************************************************
+"""
 
 from .login import OrchLogin
 from .yamlConversion import readYAML

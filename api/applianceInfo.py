@@ -1,6 +1,8 @@
 """
 ********
+
 This module retrieves information on all appliances.
+
 ********
 """
 

@@ -1,4 +1,11 @@
-# API call to login to Orchestrator and store session cookie
+"""
+************************************************************************
+
+This module logs in to Orchestrator and stores the returned
+session cookie, for future API calls.
+
+************************************************************************
+"""
 
 def OrchLogin(orchIP, user, password):
     import requests

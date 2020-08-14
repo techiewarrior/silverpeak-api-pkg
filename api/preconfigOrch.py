@@ -1,4 +1,10 @@
-# Upload preconfiguration to Orchestrator via REST API
+"""
+**********************************************************
+
+Upload preconfiguration to Orchestrator via REST API
+
+**********************************************************
+"""
 
 def preconfigUpload(orchIP, loginCookie, name, tag, data):
     import requests

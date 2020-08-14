@@ -1,4 +1,10 @@
-# Create cloudinit files to make iso files for ECV boot
+"""
+**********************************************************************
+
+This module creates files to make iso files for ECV cloudinit boot.
+
+**********************************************************************
+"""
 
 def spcustomCreate(name, tag, path):
 
