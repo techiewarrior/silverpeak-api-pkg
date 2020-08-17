@@ -9,6 +9,7 @@ cookie, for future API calls.
 
 def OrchLogin(orchIP, user, password):
     import requests
+    import sys
 
 # Disable ssl inspection
 
@@ -21,14 +22,14 @@ def OrchLogin(orchIP, user, password):
     headers = {'Content-Type': 'application/json'}
     response = requests.request("POST", url, headers=headers, data=payload, verify=False)
 
-# store login cookie, from API call, in "orchCookie" for future API calls
+    if response.status_code == 200:
+        print('Logged into Orchestrator successfully.')
+    else:
+        sys.exit('Failed to login to Orchestrator.')
+
+# store login cookie, from API call, in "orchCookie" and return for future API calls
 
     orchCookie = response.cookies
-
-
-# Print "response" and return "orchCookie" to main.py
-
-    print(response)
     return(orchCookie)
 
 #end
