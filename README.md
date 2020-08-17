@@ -1,6 +1,3 @@
-# SilverPeak-functions
-# git alias = 'sp-api-pkg'
-
 Collection of functions for Silver Peak API calls,
 contained in a package called 'api'.  When 'api' package
 is imported, it imports all functions from each module
