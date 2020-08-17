@@ -44,6 +44,7 @@ def spcustomCreate(name, tag, path):
         file.write("# end\n")
         file.close()
         print("Succesfully created spcustom.yml created in %s" % directory)
+        print()
 
 if __name__ == '__main__':
 
