@@ -54,7 +54,7 @@ if __name__ == '__main__':
 
     name = '<appliance name>' # replace with appliance name #
     tag = '<appliance tag>' # replace with appliance tag #
-    path = r'<path to YAML configuration files' # replace with path to YAML configuration files #
+    path = r'<path to YAML configuration files>' # replace with path to YAML configuration files #
     spcustomCreate(name, tag, path)
 
 #end
