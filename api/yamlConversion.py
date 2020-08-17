@@ -42,37 +42,6 @@ def readYAML(filename):
 
         return name, tag, data
 
-""" 
-**********************************************************************************
-For local testing Only
-**********************************************************************************
-"""
-
-if __name__ == '__main__':
-
-    print('\n ****************************************************************')
-    print('\n    This module was ran directly. It is for testing only.')
-    print('    It will read all .yml files within the specified directory')
-    print('    No configurations will be uploaded to Orchestrator.')
-    print('    This section can serve as an example for looping over many')
-    print('    .yml files, in a \'main\' type function.')
-    print('\n **************************************************************** \n')
-
-"""
-*********** Example for 'main'
-
-for entry in os.listdir(path):
-            if entry.endswith('.yml'):
-                filename = os.path.join(path, entry)
-                result = api.readYAML(filename)
-                print(result[0])
-                print(result[1])
-                print(result[2])
-                print()
-                
-*************                
-"""
-
 def readTEST(path):
     import os
     import base64
@@ -106,9 +75,39 @@ def readTEST(path):
                 print('name: ' + name + ',' + ' tag: ' + tag + ' data: ' + data)
                 print('For ' + name + ', YAML conversion to base64 completed.')
 
+""" 
+**********************************************************************************
+For local testing Only
+**********************************************************************************
+"""
 
+if __name__ == '__main__':
 
-path = r'C:\Users\janderson.JANDERSON-W10\Box Sync\Jason Anderson\Sync\GitHub\lab-ecv-autoDeployment\lab-ecv-autoDeployment'
-readTEST(path)
+    print('\n ****************************************************************')
+    print('\n    This module was ran directly. It is for testing only.')
+    print('    It will read all .yml files within the specified directory')
+    print('    No configurations will be uploaded to Orchestrator.')
+    print('    This section can serve as an example for looping over many')
+    print('    .yml files, in a \'main\' type function.')
+    print('\n **************************************************************** \n')
+
+    path = r'C:\Users\janderson.JANDERSON-W10\Box Sync\Jason Anderson\Sync\GitHub\lab-ecv-autoDeployment\lab-ecv-autoDeployment'
+    readTEST(path)
+
+"""
+************************************************************ 
+Example for 'main'
+
+for entry in os.listdir(path):
+            if entry.endswith('.yml'):
+                filename = os.path.join(path, entry)
+                result = api.readYAML(filename)
+                print(result[0])
+                print(result[1])
+                print(result[2])
+                print()
+                
+************************************************************
+"""
 
 #end
