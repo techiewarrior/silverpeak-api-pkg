@@ -52,9 +52,9 @@ if __name__ == '__main__':
     print('\n    This module was ran directly. It is for testing only.')
     print('\n **************************************************************** \n')
 
-    name = 'ecv_test'
-    tag = 'ecv_tag'
-    path = r'C:\Users\janderson.JANDERSON-W10\Box Sync\Jason Anderson\Sync\Dev\silverpeak-api-pkg\tests'
+    name = '<appliance name>' # replace with appliance name #
+    tag = '<appliance tag>' # replace with appliance tag #
+    path = r'<path to YAML configuration files' # replace with path to YAML configuration files #
     spcustomCreate(name, tag, path)
 
 #end
