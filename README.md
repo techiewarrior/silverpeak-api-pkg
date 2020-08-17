@@ -6,3 +6,5 @@ preface the function with "api.".
 
 For example, to pass login variables to the function 'OrchLogin'
 in the 'login.py' module, use 'api.OrchLogin(orchIP, user, password)'.
+
+Additional modules will be added, as the need arises.
