@@ -38,6 +38,8 @@ def readYAML(filename):
 
         data = conversion.decode()
 
+        print('For ' + name +', YAML conversion to base64 completed.')
+
         return name, tag, data
 
 """ 
@@ -102,9 +104,11 @@ def readTEST(path):
                 data = conversion.decode()
 
                 print('name: ' + name + ',' + ' tag: ' + tag + ' data: ' + data)
+                print('For ' + name + ', YAML conversion to base64 completed.')
 
 
-    path = r'C:\Users\janderson.JANDERSON-W10\Box Sync\Jason Anderson\Sync\GitHub\lab-ecv-autoDeployment\lab-ecv-autoDeployment'
-    readTEST(path)
+
+path = r'C:\Users\janderson.JANDERSON-W10\Box Sync\Jason Anderson\Sync\GitHub\lab-ecv-autoDeployment\lab-ecv-autoDeployment'
+readTEST(path)
 
 #end
