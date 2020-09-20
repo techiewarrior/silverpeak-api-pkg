@@ -8,10 +8,10 @@ package, so they can be called by using 'api.<function>'.
 ***************************************************************
 """
 
-from .login import OrchLogin
+from .login import OrchHelper
 from .yamlConversion import readYAML
 from .preconfigOrch import preconfigUpload
 from .spcustomFile import spcustomCreate
-from .applianceInfo import applianceINFO
+from .appliance_info import ApplianceInfo
 
 #end
