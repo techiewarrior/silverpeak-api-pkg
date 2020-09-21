@@ -23,6 +23,9 @@ api_session = api.OrchHelper(url, user, pwd)  # Create OrchHelper object
 #    api_session.mfa_login(mfa)
 
 site_list = api_session.login()  # Call login method on OrchHelper object
+
+# Add addtional code here
+
 api_session.logout()
 
 
