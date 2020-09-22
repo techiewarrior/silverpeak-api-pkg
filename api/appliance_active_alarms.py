@@ -19,13 +19,15 @@ class ApplianceActiveAlarms:
     def active_alarms(cls, obj):
         """ This method ........ """
 
-        r = ApiMethods.get_appl("/appliance/rest/{0}//alarm".format(obj.id), obj)
-        if r.status_code == 200:
-            alarm_summary = r.json()
+        try:
+            r = ApiMethods.get_appl("/appliance/rest/{0}//alarm"
+                .format(obj.id), obj)
+            if r.status_code == 200:
+                alarm_summary = r.json()
             return alarm_summary
 
         else:
-            print("{0}: unable to get alarm summary for: {1}"
-                  .format(obj.hostName, obj.id))
+            print("Unable to get alarm summary for: {0} {1} {2}"
+                  .format(obj.hostName, obj.id, r.text))
 
 # end

@@ -73,14 +73,16 @@ class ApplianceInfo:
             to it, and passes both the object and appropriate url for the api
             call, to the 'GET' method in apicalls.py """
 
-        r = ApiMethods.get("/appliance", obj)
-        if r.status_code == 200:
-            dict = r.json()
-            for entry in dict:
-                site_info.append(ApplianceInfo(obj, entry))
-            return site_info
-        else:
-            print("{0}: unable to get appliance list: {1}".format(obj.url, r.text))
-            return []
+        try:
+            r = ApiMethods.get("/appliance", obj)
+           if r.status_code == 200:
+               dict = r.json()
+               for entry in dict:
+                   site_info.append(ApplianceInfo(obj, entry))
+               return site_info
+           else:
+               print("Unable to get appliance list: {0}".format(r.text))
+               return []
+        except:
 
 # end
