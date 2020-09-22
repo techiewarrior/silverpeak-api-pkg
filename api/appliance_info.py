@@ -26,6 +26,7 @@ class ApplianceInfo:
         self.url_prefix = obj.url_prefix
         self.session = requests.Session()
         self.headers = obj.headers
+        self.cookies = obj.cookies
         self.apiSrcId = "?source=menu_rest_apis_id"  # for API calls w/ just source as query param
         self.apiSrcId2 = "&source=menu_rest_apis_id"  # for API calls w/ multiple query params
         self.supportedAuthModes = ["local", "radius",

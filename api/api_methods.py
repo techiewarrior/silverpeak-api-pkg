@@ -22,10 +22,17 @@ class ApiMethods:
                                 headers=obj.headers)
 
     @classmethod
-    def get(cls, url, obj):
+    def get_orch(cls, url, obj):
         apiSrcStr = obj.apiSrcId if ("?" not in url) else obj.apiSrcId2
         return obj.session.get(obj.url_prefix + url + apiSrcStr, verify=False,
                                timeout=120, headers=obj.headers)
+
+    @classmethod
+    def get_appl(cls, url, obj):
+        apiSrcStr = obj.apiSrcId if ("?" not in url) else obj.apiSrcId2
+        return obj.session.get(obj.url_prefix + url + apiSrcStr, verify=False,
+                               timeout=120, headers=obj.headers,
+                               cookies=obj.cookies)
 
     @classmethod
     def delete(cls, url, obj):
